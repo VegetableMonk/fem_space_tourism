@@ -1,0 +1,78 @@
+@use './navbar.scss' as *;
+
+body{
+	background-image: url(./assets/home/background-home-mobile.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	@media (min-width:500px){
+		background-image: url(./assets/home/background-home-tablet.webp);
+	}
+	@media (min-width:1200px){
+		background-image: url(./assets/home/background-home-desktop.webp);
+	}
+}
+
+.home-container{
+	display:grid;
+	position: relative;
+	padding-inline:clamp(0.1rem,5%,2rem);
+	grid-template-areas: 
+	"description"
+	"button";
+	grid-auto-rows: max-content;
+	align-items: end;
+	justify-items: center;
+
+	@media (min-width:1200px){
+		justify-items: start;
+		grid-template-areas: 
+		"description button";
+		grid-template-columns: 1fr 1fr;
+		padding-inline:6rem;
+	}
+}
+.description{
+	grid-area: description;
+	text-align: center;
+	max-width: 70ch;
+	margin-top:20%;
+
+	p:not(.sh1){
+		grid-area: text;
+		margin-bottom: 15vh;
+		@media (min-width: 1200px){
+			margin-bottom: 0;
+		}
+	}
+	@media (min-width: 1200px){
+		margin-bottom: 0;
+		text-align: start;
+	}
+}
+
+.button-explore{
+	grid-area: button;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	font-family: $ff-m;
+	font-size: 2rem;
+	width:10rem;
+	aspect-ratio: 1;
+	border:none;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 white;
+	transition: box-shadow 500ms;
+	text-transform: uppercase;
+	@media (min-width:1200px){
+		margin-top: auto;
+		margin-inline: auto;
+		margin-bottom: 0;
+	}
+
+	&:hover{
+		box-shadow: 0 0 0 3rem rgba($c-n-900,20%);
+		background-color: $c-n-900;
+	}
+}
+
