@@ -4,9 +4,5 @@ module.exports = {
 	plugins: [
 		["autoprefixer"],
 		["cssnano"],
-		["webp-in-css/plugin", {
-			check: decl => /\.jpg/.test(decl.value) && !decl.value.includes("as=webp"),
-			rename: url => url.replace(".jpg", ".jpg?as=webp")
-		}]
 	],
 };

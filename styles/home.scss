@@ -1,6 +1,6 @@
 @use './navbar.scss' as *;
 
-body{
+.webp body{
 	background-image: url(./assets/home/background-home-mobile.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10,6 +10,18 @@ body{
 	}
 	@media (min-width:1200px){
 		background-image: url(./assets/home/background-home-desktop.webp);
+	}
+}
+.no-webp body, .no-js body{
+	background-image: url(./assets/home/background-home-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	@media (min-width:500px){
+		background-image: url(./assets/home/background-home-tablet.jpg);
+	}
+	@media (min-width:1200px){
+		background-image: url(./assets/home/background-home-desktop.jpg);
 	}
 }
 
@@ -70,7 +82,7 @@ body{
 		margin-bottom: 0;
 	}
 
-	&:hover{
+	& button:hover{
 		box-shadow: 0 0 0 3rem rgba($c-n-900,20%);
 		background-color: $c-n-900;
 	}

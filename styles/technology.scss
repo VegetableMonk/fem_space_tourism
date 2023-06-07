@@ -1,6 +1,6 @@
 @use './navbar.scss' as *;
 
-body{
+.webp{
 	background-image: url(./assets/technology/background-technology-mobile.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -9,6 +9,18 @@ body{
 	}
 	@media (min-width:1200px){
 		background-image: url(./assets/technology/background-technology-desktop.webp);
+	}
+}
+
+.no-webp body, .no-js body{
+	background-image: url(./assets/technology/background-technology-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-width:500px){
+		background-image: url(./assets/technology/background-technology-tablet.jpg);
+	}
+	@media (min-width:1200px){
+		background-image: url(./assets/technology/background-technology-desktop.jpg);
 	}
 }
 

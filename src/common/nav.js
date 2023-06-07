@@ -1,5 +1,3 @@
-require('webp-in-css/polyfill')
-
 const sidebar = document.querySelector('.nav-list')
 const menuButton = document.querySelector('#nav-menu')
 menuButton.addEventListener('click',()=>{

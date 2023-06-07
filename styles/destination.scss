@@ -1,6 +1,6 @@
 @use './navbar.scss' as *;
 
-body{
+.webp{
 	background-image: url(./assets/destination/background-destination-mobile.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -10,6 +10,18 @@ body{
 	}
 	@media (min-width:1200px){
 		background-image: url(./assets/destination/background-destination-desktop.webp);
+	}
+}
+.no-webp body, .no-js body{
+	background-image: url(./assets/destination/background-destination-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	@media (min-width:500px){
+		background-image: url(./assets/destination/background-destination-tablet.jpg);
+	}
+	@media (min-width:1200px){
+		background-image: url(./assets/destination/background-destination-desktop.jpg);
 	}
 }
 
